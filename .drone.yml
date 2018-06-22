@@ -1,0 +1,12 @@
+
+pipeline:
+  frontend:
+    image: node:8
+    commands:
+      - npm install
+      - npm test
+
+  notify:
+    image: plugins/slack
+    channel: developers
+    username: drone
